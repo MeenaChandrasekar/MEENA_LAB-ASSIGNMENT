@@ -1,5 +1,4 @@
-
-package C;
+package c;
 
 import java.io.Serializable;
 
