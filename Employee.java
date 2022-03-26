@@ -1,6 +1,7 @@
 
 
-package com.empapp.model.dao.employee;
+
+package com.demoapp;
 //DTO: data transfer object
 public class Employee {
 	private int id ;
