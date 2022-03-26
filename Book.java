@@ -1,48 +1,42 @@
-package d;
+package com.bookapp.model.dao;
 
 public class Book {
 	private int id;
-	private String sbn;
 	private String title;
-	private String author;
-	private int price;
-
-	public Book(int id, String sbn, String title, String author, int price) {
-		this.id = id;
-		this.sbn = sbn;
-		this.title = title;
-		this.author = author;
-		this.price = price;
-	}
-
+	private double price;
 	public int getId() {
 		return id;
 	}
-
-	public String getSbn() {
-		return sbn;
+	public void setId(int id) {
+		this.id = id;
 	}
-
 	public String getTitle() {
 		return title;
 	}
-
-	public String getAuthor() {
-		return author;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
-
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
-
+	public Book(int id, String title, double price) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.price = price;
+	}
+	public Book(String title, double price) {
+		super();
+		this.title = title;
+		this.price = price;
+	}
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", sbn=" + sbn + ", title=" + title + ", author=" + author + ", price=" + price + "]";
+		return "book [id=" + id + ", title=" + title + ", price=" + price + "]";
 	}
-
+	
 	
 }
