@@ -1,13 +1,22 @@
-package com.bookapp.model.dao;
+package com.bookapp.model.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="books_table_batch6")
 public class Book {
-	private int id;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private String title;
-	private double price;
-	public int getId() {
+	private Double price;
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getTitle() {
@@ -16,27 +25,32 @@ public class Book {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public double getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
-	public Book(int id, String title, double price) {
+	public Book(Integer id, String title, Double price) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.price = price;
 	}
-	public Book(String title, double price) {
+	public Book() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Book(String title, Double price) {
 		super();
 		this.title = title;
 		this.price = price;
 	}
 	@Override
 	public String toString() {
-		return "book [id=" + id + ", title=" + title + ", price=" + price + "]";
+		return "Book [id=" + id + ", title=" + title + ", price=" + price + "]";
 	}
+
 	
 	
 }
